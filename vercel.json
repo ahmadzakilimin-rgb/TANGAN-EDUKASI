@@ -1,0 +1,18 @@
+{
+  "name": "tanganedukasi",
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/about", "destination": "/" },
+    { "source": "/programs", "destination": "/" },
+    { "source": "/programs/impact", "destination": "/" },
+    { "source": "/impact", "destination": "/" },
+    { "source": "/dampakbumi", "destination": "/" },
+    { "source": "/portfolio", "destination": "/" },
+    { "source": "/clean-log", "destination": "/" },
+    { "source": "/collaboration", "destination": "/" },
+    { "source": "/team", "destination": "/" },
+    { "source": "/contact", "destination": "/" }
+  ]
+}

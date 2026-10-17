@@ -1,0 +1,19 @@
+CREATE DATABASE IF NOT EXISTS tangan_edukasi
+  CHARACTER SET utf8mb4
+  COLLATE utf8mb4_unicode_ci;
+
+USE tangan_edukasi;
+
+CREATE TABLE IF NOT EXISTS clean_logs (
+  id VARCHAR(64) NOT NULL PRIMARY KEY,
+  title VARCHAR(100) NOT NULL,
+  location VARCHAR(100) NOT NULL,
+  activity_date DATE NOT NULL,
+  participants INT UNSIGNED NOT NULL,
+  plastic_kg DECIMAL(10, 1) UNSIGNED NOT NULL DEFAULT 0.0,
+  other_kg DECIMAL(10, 1) UNSIGNED NOT NULL DEFAULT 0.0,
+  bags INT UNSIGNED NOT NULL DEFAULT 0,
+  notes VARCHAR(300) NOT NULL DEFAULT '',
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  INDEX clean_logs_activity_date (activity_date)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
